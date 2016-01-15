@@ -4,7 +4,7 @@
  * General Functions
  * 
  * 
- 
+
  * @version 1.0
  * @package Namit Holdings
  * 
@@ -15,7 +15,7 @@
  * @param String $var
  * @return Boolean
  * 
- 
+
  * @version 1.0
  * @package Namit Holdings
  * 
@@ -31,7 +31,7 @@ function _set($var) {
  * @param String $var
  * @return String $var
  * 
- 
+
  * @version 1.0
  * @package Namit Holdings
  * 
@@ -45,7 +45,7 @@ function _e(&$s, $a = null) {
  * 
  * @param String $string
  * @return String escaped string
- 
+
  * @version 1.0
  * @package Namit Holdings
  */
@@ -84,7 +84,7 @@ function qs($query) {
 /**
  * Wrapper function for db update query
  * 
- 
+
  * @version 1.0
  * @package Namit Holdings
  */
@@ -99,7 +99,7 @@ function qu($table, $fields, $condition) {
  * @param String $timestamp optional unixtimestamp
  * @return String $date
  * 
- 
+
  * @version 1.0
  * @package Namit Holdings
  */
@@ -177,7 +177,7 @@ function _cgd($key, $value = null) {
 }
 
 function lr($url) {
-    return _U . $url;
+    return "?q={$url}";
 }
 
 function l($url) {
@@ -614,7 +614,7 @@ function doScheduleNightBeforeText($data) {
         'textNumber' => $data['number'],
         'tripCode' => $data['tripCode'],
         'textTime' => $dayBeforeTime,
-		'sentTime' => '0000-00-00 00:00:00', 
+        'sentTime' => '0000-00-00 00:00:00',
         'textTimeZone' => $timeZone
             ), 'REPLACE');
 }
@@ -905,7 +905,7 @@ function _mail($to, $subject, $content, $extra = array()) {
     require_once _PATH . 'lib/mail/swift/lib/swift_required.php';
 
     if (_isLocalMachine()) {
-        
+
         $to = 'dave.jay90@gmail.com';
     }
 
@@ -929,7 +929,6 @@ function _mail($to, $subject, $content, $extra = array()) {
 
     return $result;
 }
-
 
 function _mail_with_from($to, $subject, $content, $from_info, $extra = array()) {
 
@@ -1367,7 +1366,6 @@ function _isLocalMachine() {
     return IS_DEV_ENV; //$_SERVER['HTTP_HOST'] == 'localhost' ? true : false;
 }
 
-
 function compatibleTripCode($tripCode) {
     $tripCode = explode("_", $tripCode);
     return $tripCode[0];
@@ -1526,7 +1524,6 @@ function getHourDiff($max, $min) {
     $fraction = number_format(($mins / 60), 2);
     return $hours + $fraction;
 }
-
 
 function _moneyFormat($number) {
     return $number ? "$" . number_format($number) : "$0";

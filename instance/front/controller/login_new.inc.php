@@ -32,7 +32,7 @@ if (isset($_SESSION['user'])) {
     _R(lr('api_settings'));
 }
 
-//$login_action_url = lr('login');
+$login_action_url = "?q=login_new";
 $no_visible_elements = true;
 $jsInclude = "login_new.js.php";
 

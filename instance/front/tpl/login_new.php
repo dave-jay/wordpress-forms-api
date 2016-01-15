@@ -3,7 +3,7 @@
 
         <title> Namit Holdings</title>
 
-       
+
         <!-- Stylesheets -->
         <link rel="stylesheet" href="<?php print _MEDIA_URL ?>loginDesignNew/bootstrap.css">
         <link rel="stylesheet" href="<?php print _MEDIA_URL ?>loginDesignNew/bootstrap-extend.css">
@@ -19,10 +19,10 @@
         <link rel="stylesheet" href="<?php print _MEDIA_URL ?>loginDesignNew/font-awesome.css">
 
         <script>
-           
+
         </script><link rel="stylesheet" href="<?php print _MEDIA_URL ?>loginDesignNew/formValidation.css">   
         <link rel="stylesheet" href="<?php print _MEDIA_URL ?>loginDesignNew/login-v3.css">    
-    
+
 
 
     </head>
@@ -50,7 +50,7 @@
                         </div>
 
 
-                        <form class="fv-form fv-form-bootstrap" method="POST" action="<?php print $login_action_url;?>" id="loginform" autocomplete="on">
+                        <form class="fv-form fv-form-bootstrap" method="POST" action="<?php print $login_action_url; ?>" id="loginform" autocomplete="on">
 
                             <div class="form-group form-material floating">
                                 <input data-fv-field="email" class="form-control" autofocus="autofocus" name="email" type="email">
@@ -63,7 +63,7 @@
                                 <small data-fv-result="NOT_VALIDATED" data-fv-for="password" data-fv-validator="notEmpty" class="help-block" style="display: none;">The password is required</small></div>
 
                             <div class="form-group clearfix">
-                                 <div class=" checkbox-inline pull-left">
+                                <div class=" checkbox-inline pull-left">
                                     <input name="remember" value="1" id="checkbox" type="checkbox" onchange="checkremember()">
                                     <label for="inputCheckbox">Remember me</label>
                                 </div>
@@ -85,6 +85,6 @@
         <!-- End Page -->
     </body>
 </html>
- <script src="<?php print _MEDIA_URL ?>loginDesignNew/formValidation.js"></script>
+<script src="<?php print _MEDIA_URL ?>loginDesignNew/formValidation.js"></script>
 
 

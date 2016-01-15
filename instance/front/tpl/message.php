@@ -19,7 +19,7 @@
         unset($_SESSION['greetings_msg']);
     }
     ?>
-    <div class="bottom-message alert-success" id="success_msg_div">
+<div class="bottom-message alert-success" id="success_msg_div">
         <strong>Success!</strong> &nbsp;&nbsp;<?php print $greetings ?>
     </div>
 <?php endif; ?>

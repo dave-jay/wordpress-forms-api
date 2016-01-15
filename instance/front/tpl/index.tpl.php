@@ -62,7 +62,6 @@
         </div>
 
 
-<!--<script src="<?php print _MEDIA_URL ?>js/dropzone.min.js"></script>-->
 
         <?php include "scripts.php"; ?>        
 
@@ -132,16 +131,3 @@
 
     </body>
 </html>
-<?php
-if (isset($_mail_send_arr) && !empty($_mail_send_arr)) {
-    if (!empty($_mail_send_arr['to'])) {
-        if (isset($_mail_send_arr['from_email']) && trim($_mail_send_arr['from_email']) != '') {
-            $mail_from_info['name'] = trim($_mail_send_arr['from_name']);
-            $mail_from_info['email'] = trim($_mail_send_arr['from_email']);
-            $mail_res = _mail_with_from($_mail_send_arr['to'], $_mail_send_arr['subject'], $_mail_send_arr['content'], $mail_from_info);
-        } else {
-            $mail_res = _mail($_mail_send_arr['to'], $_mail_send_arr['subject'], $_mail_send_arr['content']);
-        }
-    }
-}
-?>
